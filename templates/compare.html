@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Comparison | AutoMatch AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/" class="brand">
+                <span class="brand-icon">⚡</span>
+                <div class="brand-text">
+                    <h1>AutoMatch <span class="accent-text">AI</span></h1>
+                    <span class="brand-badge">Comparison</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="javascript:history.back()" class="btn btn-outline">← Back to Recommendations</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <div class="results-banner">
+            <div class="banner-text">
+                <h2>Side-by-Side Vehicle Comparison</h2>
+                <p>Compare key specifications, fuel economy, horsepower, pricing, and suitability across your chosen candidates.</p>
+            </div>
+        </div>
+
+        {% if cars %}
+        <div class="table-responsive">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th class="spec-col">Attribute</th>
+                        {% for car in cars %}
+                        <th class="car-col">
+                            <div class="table-car-title">{{ car.brand }} {{ car.model }}</div>
+                            <div class="table-car-price">${{ "{:,.0f}".format(car.price) }}</div>
+                            <div class="table-car-sub">{{ car.year }} • {{ car.condition }}</div>
+                        </th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Price</strong></td>
+                        {% for car in cars %}
+                        <td><span class="highlight-val">${{ "{:,.0f}".format(car.price) }}</span></td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td><strong>Fuel Economy</strong></td>
+                        {% for car in cars %}
+                        <td><strong>{{ car.fuel_economy }} MPG</strong></td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td><strong>Body Type</strong></td>
+                        {% for car in cars %}
+                        <td>{{ car.body_type }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td><strong>Fuel Type</strong></td>
+                        {% for car in cars %}
+                        <td>{{ car.fuel_type }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td><strong>Transmission</strong></td>
+                        {% for car in cars %}
+                        <td>{{ car.transmission }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td><strong>Drivetrain</strong></td>
+                        {% for car in cars %}
+                        <td>{{ car.drive_type }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td><strong>Horsepower</strong></td>
+                        {% for car in cars %}
+                        <td>{{ car.horsepower }} HP</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td><strong>Engine CC</strong></td>
+                        {% for car in cars %}
+                        <td>{{ car.engine_cc }} cc</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td><strong>Seats</strong></td>
+                        {% for car in cars %}
+                        <td>{{ car.seats }} Passengers</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td><strong>Mileage</strong></td>
+                        {% for car in cars %}
+                        <td>{{ "{:,.0f}".format(car.mileage) }} mi</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td><strong>Reliability Score</strong></td>
+                        {% for car in cars %}
+                        <td>{{ car.reliability_score }} / 10</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td><strong>Location</strong></td>
+                        {% for car in cars %}
+                        <td>{{ car.city }}</td>
+                        {% endfor %}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <p>No vehicles were selected for comparison.</p>
+            <a href="/" class="btn btn-primary">Return to Car Search</a>
+        </div>
+        {% endif %}
+    </main>
+</body>
+</html>

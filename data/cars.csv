@@ -1,0 +1,186 @@
+id,brand,model,year,price,mileage,fuel_type,transmission,body_type,engine_cc,horsepower,seats,drive_type,city,condition,rating,fuel_economy,usage,luxury_score,reliability_score
+1,Toyota,RAV4 Hybrid,2023,31500,12000,Hybrid,CVT,SUV,2500,219,5,AWD,Dallas,Like New,4.8,40,Family,6,10
+2,Toyota,Camry LE,2022,24800,28000,Petrol,Automatic,Sedan,2500,203,5,FWD,Austin,Used,4.7,32,Daily Commute,5,10
+3,Toyota,Corolla Hybrid,2023,23000,15000,Hybrid,CVT,Sedan,1800,138,5,FWD,Houston,Like New,4.7,50,Daily Commute,4,10
+4,Toyota,Highlander Hybrid,2023,42500,19000,Hybrid,CVT,SUV,2500,243,7,AWD,Denver,Like New,4.8,36,Family,7,9
+5,Toyota,Tacoma TRD Off-Road,2022,38500,32000,Petrol,Automatic,Pickup,3500,278,5,4WD,Phoenix,Used,4.6,20,Off-road,5,9
+6,Toyota,GR Supra 3.0,2023,54000,8000,Petrol,Automatic,Coupe,3000,382,2,RWD,Los Angeles,Like New,4.7,25,Performance,7,8
+7,Toyota,Sienna Platinum Hybrid,2023,49000,14000,Hybrid,CVT,Minivan,2500,245,8,AWD,Chicago,Like New,4.8,36,Family,7,10
+8,Toyota,Prius Prime,2023,32500,9500,Hybrid,CVT,Hatchback,2000,220,5,FWD,San Francisco,Like New,4.8,52,Daily Commute,6,10
+9,Honda,CR-V Hybrid,2023,33800,14000,Hybrid,CVT,SUV,2000,204,5,AWD,Seattle,Like New,4.8,40,Family,6,10
+10,Honda,Civic Sport,2022,23500,22000,Petrol,CVT,Sedan,2000,158,5,FWD,San Diego,Used,4.7,33,Daily Commute,5,9
+11,Honda,Accord Hybrid Touring,2023,36500,11000,Hybrid,CVT,Sedan,2000,204,5,FWD,Atlanta,Like New,4.8,46,Business,7,9
+12,Honda,Pilot Elite,2023,48500,16000,Petrol,Automatic,SUV,3500,285,8,AWD,Dallas,Like New,4.7,21,Family,7,9
+13,Honda,Civic Type R,2023,44500,7000,Petrol,Manual,Hatchback,2000,315,4,FWD,Miami,Like New,4.9,24,Performance,6,9
+14,Honda,Odyssey Touring,2022,41000,30000,Petrol,Automatic,Minivan,3500,280,8,FWD,Orlando,Used,4.6,22,Family,6,9
+15,BMW,330i xDrive,2023,45000,14000,Petrol,Automatic,Sedan,2000,255,5,AWD,New York,Like New,4.8,28,Luxury,9,7
+16,BMW,X5 xDrive40i,2022,58500,24000,Petrol,Automatic,SUV,3000,335,5,AWD,Boston,Used,4.7,23,Luxury,9,7
+17,BMW,M4 Competition,2023,79000,9000,Petrol,Automatic,Coupe,3000,503,4,AWD,Las Vegas,Like New,4.9,19,Performance,9,7
+18,BMW,i4 eDrive40,2023,53000,11000,Electric,Automatic,Sedan,0,335,5,RWD,San Jose,Like New,4.8,109,Daily Commute,9,8
+19,BMW,X3 sDrive30i,2022,39800,26000,Petrol,Automatic,SUV,2000,248,5,RWD,Philadelphia,Used,4.6,25,Daily Commute,8,7
+20,BMW,M2 Coupe,2023,63500,6000,Petrol,Manual,Coupe,3000,453,4,RWD,Charlotte,Like New,4.9,19,Performance,8,7
+21,Mercedes,C300 4MATIC,2023,46500,13000,Petrol,Automatic,Sedan,2000,255,5,AWD,Miami,Like New,4.7,27,Luxury,9,7
+22,Mercedes,GLE 350,2022,54000,29000,Petrol,Automatic,SUV,2000,255,5,AWD,Houston,Used,4.7,22,Luxury,9,7
+23,Mercedes,EQE 350+ Sedan,2023,68000,10000,Electric,Automatic,Sedan,0,288,5,RWD,San Francisco,Like New,4.7,96,Business,10,8
+24,Mercedes,AMG C43,2023,61000,9500,Petrol,Automatic,Sedan,2000,402,5,AWD,Los Angeles,Like New,4.8,22,Performance,9,7
+25,Mercedes,GLA 250,2022,34500,25000,Petrol,Automatic,SUV,2000,221,5,FWD,Tampa,Used,4.5,28,Daily Commute,8,7
+26,Audi,A4 45 TFSI quattro,2023,43500,16000,Petrol,Automatic,Sedan,2000,261,5,AWD,Chicago,Like New,4.7,27,Luxury,9,7
+27,Audi,Q5 45 TFSI,2022,41500,27000,Petrol,Automatic,SUV,2000,261,5,AWD,Denver,Used,4.6,25,Family,8,7
+28,Audi,e-tron GT,2023,86000,8000,Electric,Automatic,Sedan,0,522,4,AWD,Seattle,Like New,4.9,82,Performance,10,8
+29,Audi,RS5 Sportback,2023,76500,11000,Petrol,Automatic,Hatchback,2900,444,5,AWD,Scottsdale,Like New,4.8,21,Performance,9,7
+30,Audi,Q7 55 TFSI,2022,55000,31000,Petrol,Automatic,SUV,3000,335,7,AWD,Minneapolis,Used,4.7,20,Family,9,7
+31,Hyundai,Tucson Hybrid,2023,32000,14000,Hybrid,Automatic,SUV,1600,226,5,AWD,Dallas,Like New,4.7,38,Family,6,8
+32,Hyundai,Elantra Hybrid,2022,22500,25000,Hybrid,Automatic,Sedan,1600,139,5,FWD,San Antonio,Used,4.6,52,Daily Commute,5,8
+33,Hyundai,IONIQ 5 Long Range,2023,43000,12000,Electric,Automatic,SUV,0,320,5,AWD,Portland,Like New,4.8,110,Daily Commute,7,8
+34,Hyundai,Palisade Calligraphy,2023,47500,18000,Petrol,Automatic,SUV,3800,291,7,AWD,Nashville,Like New,4.8,21,Family,8,8
+35,Kia,Sportage Hybrid,2023,31000,15000,Hybrid,Automatic,SUV,1600,227,5,AWD,Raleigh,Like New,4.7,38,Family,6,8
+36,Kia,EV6 Wind AWD,2023,44500,13000,Electric,Automatic,SUV,0,320,5,AWD,Austin,Like New,4.8,105,Daily Commute,7,8
+37,Kia,Telluride SX Prestige,2023,49500,19000,Petrol,Automatic,SUV,3800,291,8,AWD,Indianapolis,Like New,4.9,21,Family,8,8
+38,Kia,Forte GT,2022,20500,27000,Petrol,Manual,Sedan,1600,201,5,FWD,Columbus,Used,4.5,30,Daily Commute,4,8
+39,Ford,F-150 Lariat SuperCrew,2022,51000,33000,Petrol,Automatic,Pickup,3500,400,5,4WD,Fort Worth,Used,4.7,20,Off-road,7,8
+40,Ford,Mustang GT Premium,2023,44000,11000,Petrol,Manual,Coupe,5000,450,4,RWD,Detroit,Like New,4.8,18,Performance,6,8
+41,Ford,Mustang Mach-E Premium,2023,46000,14000,Electric,Automatic,SUV,0,346,5,AWD,San Diego,Like New,4.7,93,Daily Commute,7,8
+42,Ford,Explorer Limited,2022,38000,28000,Petrol,Automatic,SUV,2300,300,7,AWD,Kansas City,Used,4.5,23,Family,6,7
+43,Ford,Maverick Hybrid,2023,27000,16000,Hybrid,CVT,Pickup,2500,191,5,FWD,Salt Lake City,Like New,4.8,37,Daily Commute,4,8
+44,Ford,Bronco Badlands,2023,52500,15000,Petrol,Automatic,SUV,2700,330,5,4WD,Boise,Like New,4.8,17,Off-road,6,7
+45,Tesla,Model 3 Long Range,2023,39500,15000,Electric,Automatic,Sedan,0,358,5,AWD,San Francisco,Like New,4.8,131,Daily Commute,8,8
+46,Tesla,Model Y Long Range,2023,44000,17000,Electric,Automatic,SUV,0,384,5,AWD,Los Angeles,Like New,4.8,122,Family,8,8
+47,Tesla,Model S Plaid,2023,89000,10000,Electric,Automatic,Sedan,0,1020,5,AWD,Miami,Like New,4.9,116,Performance,9,8
+48,Tesla,Model X Long Range,2022,74000,22000,Electric,Automatic,SUV,0,670,7,AWD,Seattle,Used,4.7,102,Luxury,9,7
+49,Lexus,RX 350 Premium,2023,51500,14000,Petrol,Automatic,SUV,2400,275,5,AWD,Dallas,Like New,4.9,24,Luxury,9,10
+50,Lexus,NX 350h Luxury,2023,47000,12000,Hybrid,CVT,SUV,2500,240,5,AWD,Phoenix,Like New,4.9,39,Family,9,10
+51,Lexus,ES 300h Ultra Luxury,2023,46000,16000,Hybrid,CVT,Sedan,2500,215,5,FWD,Atlanta,Like New,4.9,44,Business,9,10
+52,Lexus,LC 500 Convertible,2022,94000,9000,Petrol,Automatic,Convertible,5000,471,4,RWD,Beverly Hills,Like New,4.9,18,Luxury,10,9
+53,Lexus,GX 460 Luxury,2022,56000,28000,Petrol,Automatic,SUV,4600,301,7,4WD,Houston,Used,4.8,16,Off-road,9,10
+54,Nissan,Rogue SV,2023,27500,20000,Petrol,CVT,SUV,1500,201,5,AWD,Cleveland,Like New,4.5,31,Family,5,7
+55,Nissan,Altima SR,2022,21800,34000,Petrol,CVT,Sedan,2500,188,5,FWD,Memphis,Used,4.4,32,Daily Commute,5,7
+56,Nissan,Z Performance,2023,49000,8500,Petrol,Manual,Coupe,3000,400,2,RWD,San Antonio,Like New,4.7,20,Performance,7,8
+57,Nissan,Ariya Evolve+,2023,41000,12000,Electric,Automatic,SUV,0,238,5,FWD,Denver,Like New,4.6,98,Daily Commute,7,8
+58,Suzuki,Jimny AllGrip Pro,2023,24000,11000,Petrol,Manual,SUV,1500,101,4,4WD,Tucson,Like New,4.8,34,Off-road,4,9
+59,Suzuki,Swift Sport Boosterjet,2022,18500,22000,Hybrid,Manual,Hatchback,1400,129,5,FWD,El Paso,Used,4.6,45,Daily Commute,4,9
+60,Suzuki,Vitara Hybrid,2023,26000,16000,Hybrid,Automatic,SUV,1400,127,5,AWD,Albuquerque,Like New,4.6,42,Family,5,9
+61,Subaru,Outback Touring XT,2023,39500,17000,Petrol,CVT,Wagon,2400,260,5,AWD,Boulder,Like New,4.8,26,Off-road,7,9
+62,Subaru,Crosstrek Premium,2023,26500,19000,Petrol,CVT,SUV,2000,152,5,AWD,Portland,Like New,4.7,30,Daily Commute,5,9
+63,Subaru,WRX Limited,2023,36000,12000,Petrol,Manual,Sedan,2400,271,5,AWD,Seattle,Like New,4.7,22,Performance,6,8
+64,Mazda,CX-50 2.5 Turbo,2023,37500,14000,Petrol,Automatic,SUV,2500,256,5,AWD,Austin,Like New,4.8,25,Family,7,9
+65,Mazda,MX-5 Miata Club,2023,31500,7500,Petrol,Manual,Convertible,2000,181,2,RWD,San Diego,Like New,4.9,29,Performance,6,9
+66,Mazda,Mazda3 Turbo Premium Plus,2022,29000,21000,Petrol,Automatic,Hatchback,2500,250,5,AWD,Chicago,Used,4.7,27,Daily Commute,7,9
+67,Porsche,911 Carrera S,2022,128000,11000,Petrol,Automatic,Coupe,3000,443,4,RWD,Newport Beach,Like New,4.9,20,Performance,10,9
+68,Porsche,Macan GTS,2023,84000,9500,Petrol,Automatic,SUV,2900,434,5,AWD,Greenwich,Like New,4.9,19,Luxury,10,8
+69,Porsche,Taycan 4S,2023,102000,8500,Electric,Automatic,Sedan,0,522,4,AWD,San Francisco,Like New,4.9,82,Luxury,10,8
+70,Toyota,RAV4 XLE,2022,27500,31000,Petrol,Automatic,SUV,2500,203,5,FWD,Houston,Used,4.7,30,Family,5,10
+71,Toyota,Camry Hybrid XLE,2023,33000,11000,Hybrid,CVT,Sedan,2500,208,5,FWD,Tampa,Like New,4.8,46,Daily Commute,6,10
+72,Toyota,4Runner TRD Pro,2022,51000,29000,Petrol,Automatic,SUV,4000,270,5,4WD,Denver,Used,4.8,17,Off-road,6,10
+73,Toyota,Venza Limited,2023,41500,14000,Hybrid,CVT,SUV,2500,219,5,AWD,San Jose,Like New,4.8,39,Luxury,8,10
+74,Toyota,Tundra Platinum,2023,62000,16000,Hybrid,Automatic,Pickup,3400,437,5,4WD,Dallas,Like New,4.7,20,Off-road,8,9
+75,Toyota,Yaris Cross,2022,19500,24000,Hybrid,CVT,SUV,1500,116,5,FWD,San Antonio,Used,4.6,48,Daily Commute,4,10
+76,Honda,Accord Sport 2.0T,2022,29500,26000,Petrol,Automatic,Sedan,2000,252,5,FWD,Orlando,Used,4.8,26,Performance,6,9
+77,Honda,HR-V EX-L,2023,28000,15000,Petrol,CVT,SUV,2000,158,5,AWD,Jacksonville,Like New,4.6,28,Daily Commute,5,9
+78,Honda,Passport Trailsport,2023,42000,17000,Petrol,Automatic,SUV,3500,280,5,AWD,Salt Lake City,Like New,4.7,21,Off-road,6,9
+79,Honda,Ridgeline RTL-E,2023,41500,18000,Petrol,Automatic,Pickup,3500,280,5,AWD,Phoenix,Like New,4.7,21,Family,6,9
+80,Honda,Civic Si,2023,29000,12000,Petrol,Manual,Sedan,1500,200,5,FWD,Charlotte,Like New,4.8,31,Performance,5,9
+81,BMW,530i M Sport,2023,56000,13000,Petrol,Automatic,Sedan,2000,248,5,RWD,Atlanta,Like New,4.8,27,Business,9,8
+82,BMW,X7 xDrive40i,2023,79500,14000,Petrol,Automatic,SUV,3000,375,7,AWD,Dallas,Like New,4.8,22,Luxury,10,8
+83,BMW,M340i xDrive,2023,57000,11000,Petrol,Automatic,Sedan,3000,382,5,AWD,Miami,Like New,4.9,26,Performance,8,8
+84,BMW,iX xDrive50,2023,82000,10000,Electric,Automatic,SUV,0,516,5,AWD,Los Angeles,Like New,4.8,86,Luxury,10,8
+85,BMW,Z4 sDrive M40i,2023,64000,7000,Petrol,Automatic,Convertible,3000,382,2,RWD,Scottsdale,Like New,4.8,26,Performance,8,8
+86,BMW,X1 xDrive28i,2023,38500,16000,Petrol,Automatic,SUV,2000,241,5,AWD,Philadelphia,Like New,4.6,28,Daily Commute,8,8
+87,Mercedes,E350 4MATIC,2023,58000,12000,Petrol,Automatic,Sedan,2000,255,5,AWD,Washington,Like New,4.8,26,Business,10,8
+88,Mercedes,GLC 300 4MATIC,2023,48500,15000,Petrol,Automatic,SUV,2000,255,5,AWD,Houston,Like New,4.8,26,Luxury,9,8
+89,Mercedes,S580 4MATIC,2022,108000,19000,Petrol,Automatic,Sedan,4000,496,5,AWD,Beverly Hills,Used,4.9,21,Luxury,10,8
+90,Mercedes,EQB 300 4MATIC,2023,51000,14000,Electric,Automatic,SUV,0,225,7,AWD,San Francisco,Like New,4.6,98,Family,8,8
+91,Mercedes,AMG GT Coupe,2022,115000,10000,Petrol,Automatic,Coupe,4000,523,2,RWD,Las Vegas,Used,4.9,17,Performance,10,8
+92,Mercedes,GLS 450,2023,83000,16000,Petrol,Automatic,SUV,3000,362,7,AWD,New York,Like New,4.8,20,Family,10,8
+93,Audi,A6 55 TFSI,2023,59000,13000,Petrol,Automatic,Sedan,3000,335,5,AWD,Boston,Like New,4.8,24,Business,9,8
+94,Audi,Q8 55 TFSI,2023,72000,15000,Petrol,Automatic,SUV,3000,335,5,AWD,Miami,Like New,4.8,20,Luxury,9,8
+95,Audi,S3 Premium Plus,2023,47000,11000,Petrol,Automatic,Sedan,2000,306,5,AWD,Chicago,Like New,4.8,27,Performance,8,8
+96,Audi,Q3 45 TFSI,2022,35000,26000,Petrol,Automatic,SUV,2000,228,5,AWD,Pittsburgh,Used,4.6,25,Daily Commute,7,8
+97,Audi,TT RS Coupe,2022,69000,12000,Petrol,Automatic,Coupe,2500,394,4,AWD,Denver,Used,4.9,23,Performance,8,8
+98,Audi,A4 Allroad,2023,47500,14000,Petrol,Automatic,Wagon,2000,261,5,AWD,Seattle,Like New,4.8,26,Off-road,8,8
+99,Ford,F-150 Lightning EV,2023,56000,11000,Electric,Automatic,Pickup,0,452,5,AWD,Detroit,Like New,4.7,70,Off-road,7,8
+100,Ford,Edge Titanium,2022,32000,31000,Petrol,Automatic,SUV,2000,250,5,AWD,Cleveland,Used,4.5,23,Family,6,7
+101,Ford,Escape Plug-in Hybrid,2023,36500,13000,Hybrid,CVT,SUV,2500,210,5,FWD,Minneapolis,Like New,4.6,40,Daily Commute,5,8
+102,Ford,Ranger Lariat 4x4,2023,41000,16000,Petrol,Automatic,Pickup,2300,270,5,4WD,Dallas,Like New,4.6,22,Off-road,6,8
+103,Ford,Super Duty F-250 Diesel,2022,64000,38000,Diesel,Automatic,Pickup,6700,475,5,4WD,San Antonio,Used,4.7,16,Off-road,6,9
+104,Hyundai,Ioniq 6 SEL,2023,41000,10000,Electric,Automatic,Sedan,0,225,5,RWD,Atlanta,Like New,4.8,140,Daily Commute,7,9
+105,Hyundai,Santa Fe Hybrid,2023,38000,15000,Hybrid,Automatic,SUV,1600,226,5,AWD,Nashville,Like New,4.7,34,Family,7,8
+106,Hyundai,Sonata N Line,2022,28000,24000,Petrol,Automatic,Sedan,2500,290,5,FWD,Orlando,Used,4.7,27,Performance,6,8
+107,Hyundai,Kona Electric,2023,33500,12000,Electric,Automatic,SUV,0,201,5,FWD,Portland,Like New,4.7,120,Daily Commute,6,8
+108,Hyundai,Santa Cruz Limited,2023,39000,14000,Petrol,Automatic,Pickup,2500,281,5,AWD,Tampa,Like New,4.7,22,Family,6,8
+109,Kia,K5 GT,2023,31500,15000,Petrol,Automatic,Sedan,2500,290,5,FWD,Phoenix,Like New,4.8,27,Performance,6,8
+110,Kia,Niro EV Wave,2023,39500,11000,Electric,Automatic,SUV,0,201,5,FWD,San Diego,Like New,4.7,113,Daily Commute,6,8
+111,Kia,Sorento Hybrid EX,2023,37000,17000,Hybrid,Automatic,SUV,1600,227,6,AWD,Indianapolis,Like New,4.7,37,Family,7,8
+112,Kia,Carnival SX Prestige,2023,46000,18000,Petrol,Automatic,Minivan,3500,290,7,FWD,Dallas,Like New,4.8,22,Family,8,8
+113,Kia,Stinger GT2,2022,43000,23000,Petrol,Automatic,Sedan,3300,368,5,AWD,Austin,Used,4.8,20,Performance,8,8
+114,Tesla,Model 3 Performance,2023,49000,9500,Electric,Automatic,Sedan,0,455,5,AWD,San Jose,Like New,4.9,113,Performance,8,8
+115,Tesla,Model Y Performance,2023,52000,12000,Electric,Automatic,SUV,0,455,5,AWD,Los Angeles,Like New,4.8,111,Performance,8,8
+116,Tesla,Model X Plaid,2023,97000,8000,Electric,Automatic,SUV,0,1020,6,AWD,Miami,Like New,4.9,91,Performance,10,8
+117,Lexus,IS 350 F Sport,2023,44500,15000,Petrol,Automatic,Sedan,3500,311,5,RWD,Houston,Like New,4.8,23,Performance,8,10
+118,Lexus,TX 350 Luxury,2024,61000,5000,Petrol,Automatic,SUV,2400,275,7,AWD,Dallas,Like New,4.9,23,Family,9,10
+119,Lexus,UX 250h F Sport,2023,35500,13000,Hybrid,CVT,SUV,2000,181,5,AWD,Austin,Like New,4.8,42,Daily Commute,8,10
+120,Lexus,LS 500 AWD,2022,72000,24000,Petrol,Automatic,Sedan,3400,416,5,AWD,Atlanta,Used,4.8,21,Luxury,10,10
+121,Nissan,Pathfinder Platinum,2023,47000,16000,Petrol,Automatic,SUV,3500,284,7,4WD,Charlotte,Like New,4.6,23,Family,7,7
+122,Nissan,Frontier PRO-4X,2023,38500,17000,Petrol,Automatic,Pickup,3800,310,5,4WD,San Antonio,Like New,4.6,19,Off-road,6,8
+123,Nissan,Leaf SV Plus,2022,22000,26000,Electric,Automatic,Hatchback,0,214,5,FWD,Seattle,Used,4.5,108,Daily Commute,4,8
+124,Nissan,Sentra SR,2022,19500,31000,Petrol,CVT,Sedan,2000,149,5,FWD,Memphis,Used,4.4,33,Daily Commute,4,7
+125,Volkswagen,Golf GTI Autobahn,2023,37500,12000,Petrol,Manual,Hatchback,2000,241,5,FWD,Chicago,Like New,4.8,27,Performance,7,8
+126,Volkswagen,ID.4 Pro S AWD,2023,43500,14000,Electric,Automatic,SUV,0,295,5,AWD,Denver,Like New,4.6,99,Daily Commute,7,8
+127,Volkswagen,Atlas Cross Sport,2022,34000,28000,Petrol,Automatic,SUV,3600,276,5,AWD,Detroit,Used,4.5,20,Family,6,7
+128,Volkswagen,Jetta GLI,2023,30500,15000,Petrol,Automatic,Sedan,2000,228,5,FWD,Cincinnati,Like New,4.7,30,Performance,6,8
+129,Volvo,XC90 Recharge Plug-in,2023,67000,14000,Hybrid,Automatic,SUV,2000,455,7,AWD,Boston,Like New,4.8,58,Family,9,8
+130,Volvo,XC60 B5 Ultimate,2023,49000,16000,Petrol,Automatic,SUV,2000,247,5,AWD,Seattle,Like New,4.7,25,Luxury,9,8
+131,Volvo,S60 Recharge AWD,2023,48000,12000,Hybrid,Automatic,Sedan,2000,455,5,AWD,San Francisco,Like New,4.8,60,Performance,9,8
+132,Volvo,V60 Cross Country,2022,42000,25000,Petrol,Automatic,Wagon,2000,250,5,AWD,Boulder,Used,4.8,25,Off-road,8,8
+133,Chevrolet,Corvette Stingray 2LT,2023,76000,8000,Petrol,Automatic,Coupe,6200,495,2,RWD,Tampa,Like New,4.9,19,Performance,8,8
+134,Chevrolet,Silverado 1500 High Country,2022,53000,32000,Diesel,Automatic,Pickup,3000,277,5,4WD,Dallas,Used,4.6,24,Off-road,7,8
+135,Chevrolet,Tahoe Premier,2023,64500,19000,Petrol,Automatic,SUV,5300,355,8,4WD,Houston,Like New,4.7,18,Family,8,8
+136,Chevrolet,Bolt EUV Premier,2023,27500,14000,Electric,Automatic,Hatchback,0,200,5,FWD,Austin,Like New,4.6,115,Daily Commute,5,8
+137,Jeep,Wrangler Rubicon 4xe,2023,54000,15000,Hybrid,Automatic,SUV,2000,375,5,4WD,Moab,Like New,4.7,49,Off-road,7,7
+138,Jeep,Grand Cherokee Summit,2022,49000,27000,Petrol,Automatic,SUV,3600,293,5,4WD,Denver,Used,4.6,21,Luxury,8,7
+139,Jeep,Gladiator Overland,2022,41000,30000,Petrol,Automatic,Pickup,3600,285,5,4WD,Phoenix,Used,4.5,19,Off-road,6,7
+140,Genesis,GV70 3.5T Sport,2023,53000,13000,Petrol,Automatic,SUV,3500,375,5,AWD,Los Angeles,Like New,4.9,21,Luxury,9,9
+141,Genesis,G80 2.5T,2023,51000,14000,Petrol,Automatic,Sedan,2500,300,5,AWD,Dallas,Like New,4.8,25,Business,9,9
+142,Genesis,Electrified GV70,2023,62000,9000,Electric,Automatic,SUV,0,429,5,AWD,San Jose,Like New,4.8,91,Luxury,9,9
+143,Hyundai,Elantra SEL Plus,2024,18679,28135,Petrol,CVT,Sedan,2000,147,5,FWD,Austin,Like New,4.6,34,Daily Commute,4,8
+144,Tesla,Model 3 RWD Special,2023,37005,19445,Electric,Automatic,Sedan,0,271,5,RWD,San Diego,Certified Pre-Owned,4.8,138,Daily Commute,8,8
+145,Lexus,RC 350 F Sport Special,2022,46975,12933,Petrol,Automatic,Coupe,3500,311,4,RWD,Austin,Like New,4.7,22,Performance,9,10
+146,Hyundai,Santa Fe SEL Plus,2024,31463,23791,Petrol,Automatic,SUV,2500,191,5,FWD,San Diego,Excellent,4.6,26,Family,6,8
+147,BMW,430i Gran Coupe Special,2021,47069,22009,Petrol,Automatic,Hatchback,2000,255,5,RWD,San Diego,Used,4.4,28,Luxury,9,8
+148,Honda,Civic EX Special,2024,23736,26604,Petrol,CVT,Sedan,1500,180,5,FWD,Los Angeles,Like New,4.5,36,Daily Commute,5,9
+149,Ford,Explorer XLT Plus,2022,33799,36965,Petrol,Automatic,SUV,2300,300,7,AWD,New York,Certified Pre-Owned,4.8,22,Family,6,7
+150,Kia,Niro Hybrid LX Plus,2022,26781,17805,Hybrid,Automatic,SUV,1600,139,5,FWD,Houston,Like New,4.5,53,Daily Commute,5,8
+151,Hyundai,Santa Fe SEL Special,2021,32188,31060,Petrol,Automatic,SUV,2500,191,5,FWD,Boston,Like New,4.8,26,Family,6,8
+152,Ford,Mustang Mach-E GT Plus,2021,55247,7202,Electric,Automatic,SUV,0,480,5,AWD,Dallas,Certified Pre-Owned,4.7,84,Performance,8,8
+153,Kia,Telluride EX Special,2024,43995,29362,Petrol,Automatic,SUV,3800,291,8,AWD,San Diego,Excellent,4.9,21,Family,7,8
+154,BMW,M240i xDrive Plus,2023,52218,11664,Petrol,Automatic,Coupe,3000,382,4,AWD,Houston,Certified Pre-Owned,4.9,26,Performance,8,8
+155,Ford,Mustang Mach-E GT Plus,2023,54557,15548,Electric,Automatic,SUV,0,480,5,AWD,Dallas,Used,4.5,84,Performance,8,8
+156,Lexus,RX 500h F Sport Plus,2021,61265,12577,Hybrid,Automatic,SUV,2400,366,5,AWD,Boston,Like New,4.8,27,Luxury,9,10
+157,Chevrolet,Camaro SS 1LE Special,2022,44877,27171,Petrol,Manual,Coupe,6200,455,4,RWD,Phoenix,Like New,4.7,19,Performance,6,8
+158,Hyundai,Elantra SEL Plus,2023,22984,23195,Petrol,CVT,Sedan,2000,147,5,FWD,Phoenix,Excellent,4.4,34,Daily Commute,4,8
+159,Tesla,Model 3 RWD Special,2024,34121,14197,Electric,Automatic,Sedan,0,271,5,RWD,Austin,Excellent,4.7,138,Daily Commute,8,8
+160,Honda,CR-V EX-L Special,2023,30512,21814,Petrol,CVT,SUV,1500,190,5,AWD,Austin,Like New,4.7,29,Family,6,9
+161,Toyota,Prius XLE Plus,2023,29083,13553,Hybrid,CVT,Hatchback,2000,196,5,AWD,San Diego,Excellent,4.6,54,Daily Commute,6,10
+162,Tesla,Model 3 RWD Special,2023,34179,25674,Electric,Automatic,Sedan,0,271,5,RWD,Seattle,Used,4.5,138,Daily Commute,8,8
+163,Hyundai,Ioniq 5 Standard Special,2021,37182,12012,Electric,Automatic,SUV,0,225,5,RWD,Austin,Like New,4.7,114,Daily Commute,7,9
+164,Hyundai,Elantra SEL Special,2022,20420,31764,Petrol,CVT,Sedan,2000,147,5,FWD,Austin,Excellent,4.7,34,Daily Commute,4,8
+165,Toyota,Highlander XLE Plus,2024,42232,33210,Petrol,Automatic,SUV,2400,265,8,AWD,Los Angeles,Used,4.8,24,Family,7,10
+166,Ford,Mustang Mach-E GT Special,2021,55617,14140,Electric,Automatic,SUV,0,480,5,AWD,San Diego,Used,4.8,84,Performance,8,8
+167,BMW,M240i xDrive Plus,2024,51776,21354,Petrol,Automatic,Coupe,3000,382,4,AWD,Boston,Used,4.7,26,Performance,8,8
+168,Lexus,RC 350 F Sport Plus,2022,49735,11003,Petrol,Automatic,Coupe,3500,311,4,RWD,Boston,Certified Pre-Owned,4.6,22,Performance,9,10
+169,Audi,S5 Sportback Plus,2024,57325,15630,Petrol,Automatic,Hatchback,3000,349,5,AWD,New York,Used,4.8,24,Performance,9,8
+170,Nissan,Versa SR Special,2021,16815,17162,Petrol,CVT,Sedan,1600,122,5,FWD,Seattle,Excellent,4.7,35,Daily Commute,3,7
+171,Hyundai,Elantra SEL Special,2021,20953,34025,Petrol,CVT,Sedan,2000,147,5,FWD,New York,Excellent,4.7,34,Daily Commute,4,8
+172,Kia,EV6 GT Plus,2022,60682,14242,Electric,Automatic,SUV,0,576,5,AWD,Los Angeles,Excellent,4.6,79,Performance,8,8
+173,Kia,EV6 GT Plus,2022,59579,7310,Electric,Automatic,SUV,0,576,5,AWD,Philadelphia,Excellent,4.4,79,Performance,8,8
+174,Honda,CR-V EX-L Special,2022,32238,29189,Petrol,CVT,SUV,1500,190,5,AWD,Houston,Like New,4.7,29,Family,6,9
+175,Kia,Telluride EX Plus,2022,43767,20126,Petrol,Automatic,SUV,3800,291,8,AWD,Dallas,Certified Pre-Owned,4.5,21,Family,7,8
+176,Audi,S5 Sportback Plus,2023,60645,18032,Petrol,Automatic,Hatchback,3000,349,5,AWD,Los Angeles,Excellent,4.4,24,Performance,9,8
+177,Toyota,Prius XLE Special,2024,31482,22371,Hybrid,CVT,Hatchback,2000,196,5,AWD,Dallas,Certified Pre-Owned,4.7,54,Daily Commute,6,10
+178,Honda,Civic EX Special,2024,26812,26471,Petrol,CVT,Sedan,1500,180,5,FWD,New York,Like New,4.8,36,Daily Commute,5,9
+179,Hyundai,Santa Fe SEL Special,2023,29237,33131,Petrol,Automatic,SUV,2500,191,5,FWD,Boston,Like New,4.4,26,Family,6,8
+180,Ford,Explorer XLT Plus,2023,36301,33734,Petrol,Automatic,SUV,2300,300,7,AWD,Chicago,Certified Pre-Owned,4.9,22,Family,6,7
+181,BMW,430i Gran Coupe Plus,2022,45607,26932,Petrol,Automatic,Hatchback,2000,255,5,RWD,Denver,Excellent,4.4,28,Luxury,9,8
+182,Toyota,Highlander XLE Special,2024,37780,31670,Petrol,Automatic,SUV,2400,265,8,AWD,Phoenix,Excellent,4.5,24,Family,7,10
+183,Honda,Civic EX Special,2023,24259,26098,Petrol,CVT,Sedan,1500,180,5,FWD,New York,Used,4.9,36,Daily Commute,5,9
+184,Toyota,Corolla LE Special,2021,19914,21141,Petrol,CVT,Sedan,2000,169,5,FWD,Austin,Used,4.6,35,Daily Commute,4,10
+185,Hyundai,Elantra SEL Special,2022,18645,31433,Petrol,CVT,Sedan,2000,147,5,FWD,Houston,Like New,4.4,34,Daily Commute,4,8

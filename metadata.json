@@ -1,0 +1,6 @@
+{
+  "name": "AutoMatch AI - Car Recommendation System",
+  "description": "DecodeLabs Project 3: AI Recommendation Logic & Matching System by Abdullah Zafar (Batch 2026). Transparent hybrid recommendation engine with dynamic priority weighting, similarity scoring, and personalized explanations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

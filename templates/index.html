@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMatch AI | Intelligent Car Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="main-header">
+        <div class="nav-container">
+            <div class="brand">
+                <span class="brand-icon">⚡</span>
+                <div class="brand-text">
+                    <h1>AutoMatch <span class="accent-text">AI</span></h1>
+                    <span class="brand-badge">DecodeLabs Project 3</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="#recommend-form" class="nav-item">Find My Car</a>
+                <a href="#how-it-works" class="nav-item">How AI Decided</a>
+                <a href="#analytics" class="nav-item">Catalog Analytics</a>
+                <a href="#about" class="nav-item">About System</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-pill">🤖 AI Preference Profiler & Matching Engine</div>
+            <h1 class="hero-title">Intelligent Car Recommendations <br><span class="gradient-text">Tailored to Your Exact Needs</span></h1>
+            <p class="hero-subtitle">
+                Powered by a transparent hybrid recommendation algorithm: dynamic multi-attribute weighting, normalized similarity scoring, and explainable AI reasoning.
+            </p>
+            <div class="hero-actions">
+                <a href="#recommend-form" class="btn btn-primary" id="hero-cta-btn">Start Finding My Car ↓</a>
+                <a href="#how-it-works" class="btn btn-outline">Explore AI Math</a>
+            </div>
+            
+            <div class="stats-row">
+                <div class="stat-card">
+                    <span class="stat-number">{{ stats.total_cars or 185 }}</span>
+                    <span class="stat-label">Vehicles Cataloged</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">${{ "{:,.0f}".format(stats.price_avg or 42000) }}</span>
+                    <span class="stat-label">Average Market Price</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">11</span>
+                    <span class="stat-label">Evaluation Attributes</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Transparent Reasoning</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preference Input Form -->
+    <section class="section form-section" id="recommend-form">
+        <div class="container">
+            <div class="section-header">
+                <h2>Configure Your Preference Profile</h2>
+                <p>Adjust your budget, driving preferences, and feature weights to compute compatibility scores across our dataset.</p>
+            </div>
+
+            <form action="/recommend" method="POST" class="preference-form" id="car-form">
+                <!-- Priority Selector -->
+                <div class="form-group-full priority-card">
+                    <label class="form-label-bold">🎯 What Matters Most to You? (Dynamic Weighting)</label>
+                    <div class="priority-grid">
+                        <label class="priority-option active">
+                            <input type="radio" name="priority" value="Budget" checked>
+                            <span class="p-title">💰 Budget</span>
+                            <span class="p-desc">High weight on affordability</span>
+                        </label>
+                        <label class="priority-option">
+                            <input type="radio" name="priority" value="Fuel Economy">
+                            <span class="p-title">⚡ Fuel Economy</span>
+                            <span class="p-desc">Hybrids & high MPG</span>
+                        </label>
+                        <label class="priority-option">
+                            <input type="radio" name="priority" value="Performance">
+                            <span class="p-title">🏎️ Performance</span>
+                            <span class="p-desc">High HP & engine power</span>
+                        </label>
+                        <label class="priority-option">
+                            <input type="radio" name="priority" value="Family">
+                            <span class="p-title">👨‍👩‍👧‍👦 Family</span>
+                            <span class="p-desc">Seating, safety & SUVs</span>
+                        </label>
+                        <label class="priority-option">
+                            <input type="radio" name="priority" value="Luxury">
+                            <span class="p-title">💎 Luxury</span>
+                            <span class="p-desc">Premium brands & comfort</span>
+                        </label>
+                        <label class="priority-option">
+                            <input type="radio" name="priority" value="Reliability">
+                            <span class="p-title">🛡️ Reliability</span>
+                            <span class="p-desc">Proven durability index</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Budget Range -->
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="min_budget">Minimum Budget ($)</label>
+                        <input type="number" id="min_budget" name="min_budget" placeholder="e.g. 20000" min="0" step="1000" value="20000">
+                    </div>
+                    <div class="form-group">
+                        <label for="max_budget">Maximum Budget ($)</label>
+                        <input type="number" id="max_budget" name="max_budget" placeholder="e.g. 45000" min="0" step="1000" value="45000">
+                    </div>
+
+                    <!-- Brand -->
+                    <div class="form-group">
+                        <label for="brand">Brand / Manufacturer</label>
+                        <select id="brand" name="brand">
+                            <option value="Any">Any Brand</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Honda">Honda</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Mercedes">Mercedes-Benz</option>
+                            <option value="Audi">Audi</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Kia">Kia</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Tesla">Tesla</option>
+                            <option value="Lexus">Lexus</option>
+                            <option value="Porsche">Porsche</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Subaru">Subaru</option>
+                            <option value="Volvo">Volvo</option>
+                            <option value="Volkswagen">Volkswagen</option>
+                        </select>
+                    </div>
+
+                    <!-- Body Type -->
+                    <div class="form-group">
+                        <label for="body_type">Body Type</label>
+                        <select id="body_type" name="body_type">
+                            <option value="Any">Any Body Style</option>
+                            <option value="SUV" selected>SUV</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Hatchback">Hatchback</option>
+                            <option value="Coupe">Coupe</option>
+                            <option value="Convertible">Convertible</option>
+                            <option value="Pickup">Pickup Truck</option>
+                            <option value="Wagon">Station Wagon</option>
+                            <option value="Minivan">Minivan</option>
+                        </select>
+                    </div>
+
+                    <!-- Fuel Type -->
+                    <div class="form-group">
+                        <label for="fuel_type">Fuel / Powertrain</label>
+                        <select id="fuel_type" name="fuel_type">
+                            <option value="Any">Any Fuel Type</option>
+                            <option value="Hybrid" selected>Hybrid</option>
+                            <option value="Electric">Electric (EV)</option>
+                            <option value="Petrol">Petrol / Gasoline</option>
+                            <option value="Diesel">Diesel</option>
+                        </select>
+                    </div>
+
+                    <!-- Transmission -->
+                    <div class="form-group">
+                        <label for="transmission">Transmission</label>
+                        <select id="transmission" name="transmission">
+                            <option value="Any">Any Transmission</option>
+                            <option value="Automatic" selected>Automatic</option>
+                            <option value="Manual">Manual</option>
+                            <option value="CVT">CVT</option>
+                        </select>
+                    </div>
+
+                    <!-- Seating -->
+                    <div class="form-group">
+                        <label for="seats">Minimum Seating Capacity</label>
+                        <select id="seats" name="seats">
+                            <option value="0">Any Seating</option>
+                            <option value="2">2 Seats (Roadster/Coupe)</option>
+                            <option value="4">4 Seats</option>
+                            <option value="5" selected>5 Seats (Standard)</option>
+                            <option value="7">7 Seats (3-Row)</option>
+                            <option value="8">8 Seats (Large Family)</option>
+                        </select>
+                    </div>
+
+                    <!-- Drive Type -->
+                    <div class="form-group">
+                        <label for="drive_type">Drivetrain</label>
+                        <select id="drive_type" name="drive_type">
+                            <option value="Any">Any Drivetrain</option>
+                            <option value="AWD" selected>AWD (All-Wheel Drive)</option>
+                            <option value="FWD">FWD (Front-Wheel Drive)</option>
+                            <option value="RWD">RWD (Rear-Wheel Drive)</option>
+                            <option value="4WD">4WD (Four-Wheel Drive)</option>
+                        </select>
+                    </div>
+
+                    <!-- Horsepower -->
+                    <div class="form-group">
+                        <label for="min_horsepower">Minimum Horsepower (HP)</label>
+                        <input type="number" id="min_horsepower" name="min_horsepower" placeholder="e.g. 200" min="50" max="1000" value="180">
+                    </div>
+
+                    <!-- Usage -->
+                    <div class="form-group">
+                        <label for="usage">Primary Usage</label>
+                        <select id="usage" name="usage">
+                            <option value="Any">Any Usage</option>
+                            <option value="Daily Commute">Daily Commute</option>
+                            <option value="Family" selected>Family Travel</option>
+                            <option value="Luxury">Executive / Luxury</option>
+                            <option value="Performance">Sport / Track Performance</option>
+                            <option value="Off-road">Off-road & Adventure</option>
+                            <option value="Business">Business Fleet</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-submit-row">
+                    <button type="submit" class="btn btn-primary btn-large" id="submit-rec-btn">
+                        ⚡ Compute AI Recommendations (Top 5)
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section bg-light" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How AutoMatch AI Works</h2>
+                <p>DecodeLabs Project 3 Transparent Algorithmic Methodology</p>
+            </div>
+
+            <div class="workflow-steps">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3>User Preference Profiling</h3>
+                    <p>Captures exact numerical constraints (budget bounds, seats, horsepower) and categorical preferences (brand, fuel, transmission, drivetrain).</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3>Dynamic Priority Weighting</h3>
+                    <p>Adjusts mathematical feature weights based on user goals (e.g., boosting Fuel Type & MPG weights under "Fuel Economy" mode).</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3>Normalized Similarity Scoring</h3>
+                    <p>Calculates exact/partial similarity and normalized distance similarity: <code>Sim = max(0, 1 - |Val - Pref| / Range)</code>.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">04</div>
+                    <h3>Top-N Ranking & Explainable AI</h3>
+                    <p>Ranks vehicles descending by total weighted compatibility score (0-100%) and generates human-readable justification bullets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>DecodeLabs Artificial Intelligence — Project 3</strong> | AI Recommendation Logic</p>
+            <p>Student: <strong>Abdullah Zafar</strong> | Batch: <strong>2026</strong> | Primary Language: <strong>Python</strong></p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

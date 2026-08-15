@@ -1,0 +1,65 @@
+=================================================================
+AutoMatch AI - Comprehensive Recommendation Engine Evaluation
+DecodeLabs Project 3: AI Recommendation Logic | Abdullah Zafar (2026)
+=================================================================
+
+Total Dataset Corpus Size: 185 vehicles
+
+--- Benchmark 1: Scenario 1: Eco-Friendly Family Hybrid SUV ---
+Priority Mode: Fuel Economy
+Applied Weights: {"fuel_type": 25.0, "mileage": 18.0, "budget": 20.0, "engine": 10.0, "body_type": 8.0, "transmission": 7.0, "usage": 6.0, "brand": 3.0, "horsepower": 1.0, "seats": 2.0, "drive_type": 0.0}
+Top Recommendation: Kia Sportage Hybrid (2023)
+Top Match Score: 100.0% | Price: $31,000.0
+Explanation:
+  • Comfortably within budget at $31,000.0 (Max: $45,000)
+  • Exact match for preferred SUV body style
+  • Matches preferred Hybrid powertrain (38.0 MPG rating)
+  • Equipped with preferred Automatic transmission
+  • Provides required 5-passenger seating capacity
+
+--- Benchmark 2: Scenario 2: Executive Luxury Cruiser ---
+Priority Mode: Luxury
+Applied Weights: {"brand": 25.0, "usage": 18.0, "body_type": 12.0, "budget": 12.0, "transmission": 10.0, "horsepower": 8.0, "drive_type": 6.0, "engine": 4.0, "mileage": 3.0, "seats": 2.0, "fuel_type": 0.0}
+Top Recommendation: Mercedes C300 4MATIC (2023)
+Top Match Score: 100.0% | Price: $46,500.0
+Explanation:
+  • Comfortably within budget at $46,500.0 (Max: $95,000)
+  • Exact match for preferred Sedan body style
+  • Exact brand match: Mercedes (Reliability rating: 7.0/10)
+
+--- Benchmark 3: Scenario 3: Budget Daily Commuter ---
+Priority Mode: Budget
+Applied Weights: {"budget": 35.0, "mileage": 15.0, "fuel_type": 12.0, "brand": 6.0, "body_type": 8.0, "transmission": 6.0, "engine": 3.0, "horsepower": 3.0, "seats": 4.0, "drive_type": 3.0, "usage": 5.0}
+Top Recommendation: Nissan Versa SR Special (2021)
+Top Match Score: 100.0% | Price: $16,815.0
+Explanation:
+  • Comfortably within budget at $16,815.0 (Max: $26,000)
+  • Exact match for preferred Sedan body style
+  • Matches preferred Petrol powertrain (35.0 MPG rating)
+
+--- Benchmark 4: Scenario 4: High-Performance Sports Coupe ---
+Priority Mode: Performance
+Applied Weights: {"horsepower": 25.0, "engine": 15.0, "drive_type": 15.0, "budget": 12.0, "body_type": 10.0, "transmission": 8.0, "brand": 5.0, "mileage": 4.0, "usage": 4.0, "fuel_type": 2.0, "seats": 0.0}
+Top Recommendation: Ford Mustang GT Premium (2023)
+Top Match Score: 100.0% | Price: $44,000.0
+Explanation:
+  • Comfortably within budget at $44,000.0 (Max: $90,000)
+  • Exact match for preferred Coupe body style
+  • Delivers impressive 450.0 HP output exceeding requirement
+
+--- Benchmark 5: Scenario 5: 7-Passenger Reliable Road-Tripper ---
+Priority Mode: Family
+Applied Weights: {"seats": 25.0, "body_type": 20.0, "budget": 15.0, "usage": 15.0, "drive_type": 8.0, "fuel_type": 5.0, "transmission": 5.0, "mileage": 4.0, "brand": 3.0, "engine": 0.0, "horsepower": 0.0}
+Top Recommendation: Ford Explorer XLT Plus (2023)
+Top Match Score: 100.0% | Price: $36,301.0
+Explanation:
+  • Comfortably within budget at $36,301.0 (Max: $55,000)
+  • Exact match for preferred SUV body style
+  • Provides required 7-passenger seating capacity
+
+=== Summary Evaluation Metrics ===
+Average Top-1 Recommendation Score: 100.0%
+Scenarios with Top Score >= 85%: 5 / 5
+Catalog Coverage (Unique Brands in Top 5): 9 unique brands
+Catalog Coverage (Unique Body Styles in Top 5): 3 body types
+Conclusion: Algorithmic matching verified successfully against all DecodeLabs criteria.

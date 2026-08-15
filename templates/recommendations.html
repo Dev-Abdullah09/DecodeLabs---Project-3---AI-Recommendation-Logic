@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recommendations | AutoMatch AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/" class="brand">
+                <span class="brand-icon">⚡</span>
+                <div class="brand-text">
+                    <h1>AutoMatch <span class="accent-text">AI</span></h1>
+                    <span class="brand-badge">Results</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="btn btn-outline">← Modify Preferences</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <!-- Results Overview Banner -->
+        <div class="results-banner">
+            <div class="banner-text">
+                <h2>Top AI Car Matches</h2>
+                <p>Evaluated <strong>{{ meta.total_cars_evaluated }}</strong> vehicles using <strong>{{ meta.priority_applied }}</strong> priority mode. Highest match: <strong>{{ meta.best_match_score }}%</strong>.</p>
+            </div>
+            <div class="banner-badges">
+                <span class="badge badge-success">Top Match: {{ meta.best_match_score }}%</span>
+                <span class="badge badge-neutral">Priority: {{ meta.priority_applied }}</span>
+            </div>
+        </div>
+
+        <!-- How AI Decided Box -->
+        <div class="ai-explanation-box">
+            <h3>🧠 How AI Decided Your Recommendations</h3>
+            <p>
+                The recommendation engine built a multidimensional profile from your preferences and calculated feature similarities across 11 attributes. 
+                Applied feature weights:
+                {% for feature, weight in applied_weights.items() %}
+                    <span class="weight-chip">{{ feature|capitalize }}: {{ weight }}%</span>
+                {% endfor %}
+            </p>
+        </div>
+
+        <form action="/compare" method="POST" id="compare-form">
+            <div class="compare-actions-bar">
+                <span id="compare-count-msg">Select 2 to 4 vehicles to compare side-by-side</span>
+                <button type="submit" class="btn btn-secondary" id="compare-btn" disabled>Compare Selected Cars (0)</button>
+            </div>
+
+            <!-- Recommendation Cards List -->
+            <div class="recommendations-grid">
+                {% for car in recommendations %}
+                <div class="car-card" id="car-card-{{ car.id }}">
+                    <div class="card-header">
+                        <div class="car-title-block">
+                            <span class="rank-pill">#{{ loop.index }} Match</span>
+                            <h3>{{ car.brand }} {{ car.model }}</h3>
+                            <span class="car-year">{{ car.year }} • {{ car.condition }}</span>
+                        </div>
+                        <div class="score-badge {% if car.compatibility_score >= 90 %}score-high{% elif car.compatibility_score >= 80 %}score-med{% else %}score-low{% endif %}">
+                            <span class="score-num">{{ car.compatibility_score }}%</span>
+                            <span class="score-label">Compatibility</span>
+                        </div>
+                    </div>
+
+                    <div class="price-row">
+                        <div class="price-val">${{ "{:,.0f}".format(car.price) }}</div>
+                        <div class="mpg-val">{{ car.fuel_economy }} MPG • {{ car.city }}</div>
+                    </div>
+
+                    <!-- Specs Matrix -->
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Body</span>
+                            <span class="spec-value">{{ car.body_type }}</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Fuel</span>
+                            <span class="spec-value">{{ car.fuel_type }}</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Transmission</span>
+                            <span class="spec-value">{{ car.transmission }}</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Drivetrain</span>
+                            <span class="spec-value">{{ car.drive_type }}</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Horsepower</span>
+                            <span class="spec-value">{{ car.horsepower }} HP</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Mileage</span>
+                            <span class="spec-value">{{ "{:,.0f}".format(car.mileage) }} mi</span>
+                        </div>
+                    </div>
+
+                    <!-- Why This Car? -->
+                    <div class="why-car-block">
+                        <h4>✓ Why Recommended:</h4>
+                        <ul>
+                            {% for bullet in car.explanation %}
+                            <li>{{ bullet }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <!-- Feature Breakdown Mini Bars -->
+                    <div class="score-breakdown">
+                        <div class="bar-item">
+                            <span>Budget ({{ car.feature_scores.budget }}%)</span>
+                            <div class="progress"><div class="progress-bar" style="width: {{ car.feature_scores.budget }}%"></div></div>
+                        </div>
+                        <div class="bar-item">
+                            <span>Fuel & Economy ({{ car.feature_scores.fuel_type }}%)</span>
+                            <div class="progress"><div class="progress-bar" style="width: {{ car.feature_scores.fuel_type }}%"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <label class="compare-checkbox-label">
+                            <input type="checkbox" name="car_ids" value="{{ car.id }}" class="compare-checkbox" onchange="updateCompareCount()">
+                            <span>Select for Comparison</span>
+                        </label>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>DecodeLabs Artificial Intelligence — Project 3 | Abdullah Zafar (2026)</p>
+    </footer>
+
+    <script>
+        function updateCompareCount() {
+            const checkboxes = document.querySelectorAll('.compare-checkbox:checked');
+            const btn = document.getElementById('compare-btn');
+            const msg = document.getElementById('compare-count-msg');
+            btn.disabled = checkboxes.length < 2;
+            btn.innerText = `Compare Selected Cars (${checkboxes.length})`;
+            msg.innerText = checkboxes.length >= 2 ? `${checkboxes.length} cars selected for comparison` : "Select at least 2 cars to compare";
+        }
+    </script>
+</body>
+</html>
